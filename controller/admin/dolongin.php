@@ -8,7 +8,6 @@
 //引入公共函数库
 $username = $_POST['username'];
 $password = $_POST['password'];
-
 //读取所有用户
 $account = file_get_contents('./data/account');
 $account = explode("\n", $account);

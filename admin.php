@@ -13,8 +13,11 @@ include('function.php');
 
 $active = !empty($_GET['a']) ? $_GET['a'] : 'index';
 //登陆验证白名单
-
-$noIsLoad = ['login'];
+$noIsLoad = ['login','dologin'];
+//if(!in_array($active,$noIsLoad)){
+//    isLoad();
+//
+//}
 //加载请求文件
 //m($active);
 include('./controller/admin/' . $active . '.php');

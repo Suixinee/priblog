@@ -22,8 +22,11 @@ function m($data)
 //验证
 function isLoad()
 {
-    $username = $_POST['userbane'];
-    $password = $_POST['password'];
+    if( !isset($_SESSION['username']) )
+    {
+        message('必须先登录！', 'admin.php?a=login');
+        exit;
+    }
 
 }
 
